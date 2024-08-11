@@ -1,0 +1,407 @@
+/* Career Hero Section */
+#career-hero {
+    background-color: var(--primary-blue);
+    color: #fff;
+    text-align: center;
+    padding: 8rem 0 4rem;
+    position: relative;
+}
+
+#career-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/career-hero-bg.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+#career-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+#career-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#career-hero p {
+    font-size: 1.2rem;
+}
+
+/* Why SocioFi Section */
+#why-sociofi {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.benefit-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Open Positions Section */
+#open-positions {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.job-listing {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.job-listing:hover {
+    transform: translateY(-5px);
+}
+
+.job-listing h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+.job-listing p {
+    margin-bottom: 1.5rem;
+}
+
+/* Application Process Section */
+#application-process {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.process-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px 0;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-blue);
+}
+
+.process-step {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+    padding: 0 40px;
+}
+
+.process-step:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.process-step:nth-child(even) {
+    left: 50%;
+}
+
+.step-icon {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.process-step:nth-child(odd) .step-icon {
+    right: -20px;
+}
+
+.process-step:nth-child(even) .step-icon {
+    left: -20px;
+}
+
+.process-step h3 {
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.process-step p {
+    margin-bottom: 0;
+}
+
+.additional-info {
+    text-align: center;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+/* Animation for process steps */
+.process-step {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.process-step.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .process-timeline::before {
+        left: 40px;
+    }
+
+    .process-step {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+    }
+
+    .process-step:nth-child(even) {
+        left: 0;
+    }
+
+    .process-step:nth-child(odd) {
+        text-align: left;
+    }
+
+    .step-icon {
+        left: 20px !important;
+        right: auto !important;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#application-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#application-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#application-form input,
+#application-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#application-form textarea {
+    height: 150px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #career-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .benefits-grid,
+    .job-listings {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 20% auto;
+    }
+}
+
+/* Add or update these styles in your career.css file */
+
+.job-listing {
+    position: relative;
+    padding-bottom: 70px; /* Increased space for buttons */
+    margin-bottom: 30px; /* Space between job listings */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #e1e1e4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.job-listing h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.job-listing > p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    margin-right: 30px;
+}
+
+.job-details {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.job-details h4 {
+    color: var(--primary-green);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.job-details ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.job-details ul li {
+    margin-bottom: 5px;
+}
+
+.job-listing .btn {
+    position: absolute;
+    bottom: 20px;
+}
+
+.job-listing .read-more {
+    left: 580px;
+}
+
+.job-listing .apply-btn {
+    right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .job-listing {
+        padding-bottom: 100px; /* More space for stacked buttons on mobile */
+    }
+    
+    .job-listing .btn {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Application Modal Styles */
+.modal-content {
+    text-align: center;
+}
+
+.application-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.qr-option, .form-option {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem;
+}
+
+.qr-code {
+    max-width: 200px;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.form-option .btn {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .application-options {
+        flex-direction: column;
+    }
+}

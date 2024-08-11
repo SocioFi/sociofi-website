@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocioFi Technology - AI Solutions for Bangladesh</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/sociofi-logo.png" alt="SocioFi Technology Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <!--<li><a href="partners.html">Partners</a></li>-->
+                <!--<li><a href="resources.html">Resources</a></li>-->
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href= "career.html">Career</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="section">
+            <div class="hero-content">
+                <h1>Revolutionizing Bangladesh's Industries with AI</h1>
+                <h2>Introducing closedBagh: AI Tailored for Bangladesh</h2>
+                <div class="cta-buttons">
+                    <a href="solutions.html" class="btn btn-primary">Explore Solutions</a>
+                    <a href="#" class="btn btn-secondary">Request Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="key-sectors" class="section">
+            <h2>Key Sectors We Serve</h2>
+            <div class="sector-carousel">
+                <div class="sector-card" data-sector="healthcare" onclick="selectSector('healthcare')">
+                    <div class="sector-card-inner">
+                       <!-- <div class="sector-card-front">
+                            <img src="images/healthcare.png" alt="Healthcare Icon">
+                            <h3>Healthcare</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Revolutionizing patient care and medical diagnostics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sector-card" data-sector="finance" onclick="selectSector('finance')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <img src="images/finance.png" alt="Finance Icon">
+                            <h3>Finance and Banking</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Enhancing financial services with AI-driven insights</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sector-card" data-sector="agriculture" onclick="selectSector('agriculture')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <img src="images/agriculture.png" alt="Agriculture Icon">
+                            <h3>Agriculture</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Optimizing crop yields and resource management</p>
+                        </div>
+                    </div>
+                </div>
+               <div class="sector-card" data-sector="education" onclick="selectSector('education')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <img src="images/education.png" alt="Education Icon">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Personalizing learning experiences for students</p>
+                        </div>
+                    </div>
+                </div>
+            
+            -->
+                <div class="sector-card" data-sector="retail-ecommerce" onclick="selectSector('retail-ecommerce')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <i class="fas fa-shopping-cart fa-3x"></i>
+                            <h3>Retail and E-commerce</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Enhancing personalized shopping experiences and optimizing inventory management</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sector-card" data-sector="travel-hospitality" onclick="selectSector('travel-hospitality')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <i class="fas fa-plane fa-3x"></i>
+                            <h3>Travel and Hospitality</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Transforming travel planning and customer service through AI-driven personalization</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sector-card" data-sector="manufacturing-rmg" onclick="selectSector('manufacturing-rmg')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <i class="fas fa-industry fa-3x"></i>
+                            <h3>Manufacturing (RMG)</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Streamlining production processes and quality control with predictive analytics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sector-card" data-sector="legal-services" onclick="selectSector('legal-services')">
+                    <div class="sector-card-inner">
+                        <div class="sector-card-front">
+                            <i class="fas fa-balance-scale fa-3x"></i>
+                            <h3>Legal Services</h3>
+                        </div>
+                        <div class="sector-card-back">
+                            <p>Automating legal research, contract analysis, and compliance monitoring for efficiency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sector-card" data-sector="supply-chain-logistics" onclick="selectSector('supply-chain-logistics')">
+                <div class="sector-card-inner">
+                    <div class="sector-card-front">
+                        <i class="fas fa-truck fa-3x"></i>
+                        <h3>Supply Chain and Logistics</h3>
+                    </div>
+                    <div class="sector-card-back">
+                        <p>Optimizing route planning, inventory management, and supply chain visibility with AI-driven insights</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- Add this section after the #key-sectors section and before the #featured-case-study section -->
+
+        <section id="data-security" class="fade-in">
+            <div class="container">
+                <h2>Data Security and Privacy</h2>
+                <p>At SocioFi, we prioritize the security and privacy of your data.</p>
+                <div class="security-grid">
+                    <div class="security-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>End-to-End Encryption</h3>
+                        <p>Your data is encrypted at every stage, ensuring maximum security.</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-user-lock"></i>
+                        <h3>Privacy by Design</h3>
+                        <p>Our systems are built with privacy as a fundamental principle.</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Compliance</h3>
+                        <p>We adhere to international data protection regulations and standards.</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Data Minimization</h3>
+                        <p>We collect and process only the data necessary for our services.</p>
+                    </div>
+                </div>
+                <a href="technology.html#data-security" class="btn btn-primary">Learn More About Our Security Measures</a>
+            </div>
+        </section>
+
+       <!-- <section id="featured-case-study">
+            <h2>Featured Case Study</h2>
+            <div class="case-study-content">
+                <img src="images/case-study.jpg" alt="Case Study Image">
+                <div class="case-study-text">
+                    <h3>AI-Powered Crop Yield Prediction in Bangladesh</h3>
+                    <p>Learn how SocioFi's AI solutions helped increase crop yields by 30% for small-scale farmers in rural Bangladesh.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="latest-news">
+            <h2>Latest News</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="images/news1.jpg" alt="News 1">
+                    <h3>SocioFi Launches New AI Model for Bangla Language Processing</h3>
+                    <p>Our latest AI model achieves breakthrough performance in Bangla language understanding and generation.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </div>
+                <div class="news-card">
+                    <img src="images/news2.jpg" alt="News 2">
+                    <h3>Partnership Announcement: SocioFi and Bangladesh Agricultural University</h3>
+                    <p>Exciting collaboration to develop AI solutions for sustainable agriculture in Bangladesh.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="solutions.html">Our Solutions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/profile.php?id=61562114755394" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/arkSocioFi" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/ark-sociofi" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.instagram.com/sociofi.io?igsh=cWpmZm0wMTMxazEz" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SocioFi Technology. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

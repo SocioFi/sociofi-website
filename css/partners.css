@@ -1,0 +1,208 @@
+/* Partners Hero Section */
+#partners-hero {
+    background-color: var(--primary-blue);
+    color: #fff;
+    text-align: center;
+    padding: 8rem 0 4rem;
+    position: relative;
+}
+
+#partners-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/partners-hero-bg.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+#partners-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+#partners-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#partners-hero p {
+    font-size: 1.2rem;
+}
+
+/* Featured Partners Section */
+#featured-partners {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.partner-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.partner-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-blue);
+}
+
+/* Partner Spotlight Section */
+#partner-spotlight {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.spotlight-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.spotlight-image {
+    flex: 1;
+}
+
+.spotlight-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.spotlight-text {
+    flex: 1;
+}
+
+.spotlight-text h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* Success Stories Section */
+#success-stories {
+    padding: 4rem 0;
+    background-color: #f5f5f5;
+}
+
+.story-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.story-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.story-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    scroll-snap-align: start;
+}
+
+.story-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* Integration Showcase Section */
+#integration-showcase {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.api-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.api-card:hover {
+    transform: translateY(-5px);
+}
+
+.api-card i {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.api-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+}
+
+/* Become Partner Section */
+#become-partner {
+    padding: 4rem 0;
+    background-color: var(--primary-green);
+    color: #fff;
+    text-align: center;
+}
+
+#become-partner h2 {
+    margin-bottom: 1rem;
+}
+
+#become-partner p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #partners-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .spotlight-content {
+        flex-direction: column;
+    }
+
+    .story-card {
+        width: 250px;
+    }
+}
